@@ -1,0 +1,814 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-image: url("../img/main/site_back.png");
+    background-size: cover;
+    overflow-x: hidden
+}
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 1%;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+.header-left-items {
+  display: flex;
+  gap: 4vw;
+  margin-left: 15%;
+  align-items: center;
+}
+
+.header-right-items {
+  display: flex;
+  align-items: center;
+  gap: 4vw;
+  margin-right: 15%;
+}
+
+.icon-logo {
+  position: relative;
+  width: clamp(35px, 5vw, 205px);
+  height: clamp(35px, 5vw, 205px);
+}
+
+.logo-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+  display: block;
+}
+
+.logo-hover,
+.logo-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.logo-link:hover .logo-hover {
+  opacity: 1;
+}
+
+.logo-link:active .logo-active {
+  opacity: 1;
+  z-index: 2;
+}
+.logo-link:active .logo-hover {
+  opacity: 0;
+}
+
+.icon-shape {
+  position: relative;
+  width: clamp(35px, 35vw, 505px);
+  height: clamp(35px, 5vw, 205px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-shape .shape-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+
+.icon-shape nav {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(8px, 1.5vw, 25px);
+  white-space: nowrap;
+  z-index: 2;
+}
+
+.icon-shape nav img.nav-icon {
+  width: clamp(10px, 2vw, 20px);
+  height: auto;
+  margin-right: clamp(4px, 0.8vw, 8px);
+}
+
+.icon-shape nav a {
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: clamp(10px, 1.5vw, 18px);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.icon-shape nav a:hover {
+  color: rgb(241, 241, 156);
+}
+
+.icon-heart {
+  position: relative;
+  width: clamp(25px, 3.5vw, 180px);
+  height: clamp(25px, 3.5vw, 180px);
+}
+
+.heart-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+  display: block;
+}
+
+.heart-hover,
+.heart-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.icon-heart:hover .heart-hover {
+  opacity: 1;
+}
+
+.icon-heart:active .heart-active {
+  opacity: 1;
+  z-index: 2;
+}
+.icon-heart:active .heart-hover {
+  opacity: 0;
+}
+
+.icon-bag {
+  position: relative;
+  width: clamp(25px, 3.5vw, 200px);
+  height: clamp(25px, 3.5vw, 200px);
+}
+
+.bag-link {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.bag-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+  display: block;
+}
+
+.bag-hover,
+.bag-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.bag-link:hover .bag-hover {
+  opacity: 1;
+}
+
+.bag-link:active .bag-active {
+  opacity: 1;
+  z-index: 2;
+}
+.bag-link:active .bag-hover {
+  opacity: 0;
+}
+.main-banner {
+    display: flex;
+    flex-direction: row;
+    gap: clamp(5px, 5vw, 20px);
+    margin-left: 15%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+.big-banner {
+    display: flex;
+    position: relative;
+    width: clamp(300px, 38vw, 1500px);
+    height: clamp(200px, 38vw, 1000px);
+    max-width: 100%;
+
+}
+.big-banner-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    left: 15%;
+    top: 10%;
+    z-index: 10;
+
+}
+.big-banner-text a {
+    margin-top: -10%;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(3px, 2vw, 20px);
+}
+.big-banner-text h1 {
+    color: white;
+    font-family: 'Jua', sans-serif;
+    letter-spacing: clamp(2px, 1vw ,10px);
+    font-weight: 300;
+    font-size: clamp(20px, 6vw, 150px);
+}
+
+.big-banner-button {
+  position: absolute;
+  left: clamp(10%, 6vw, 140%);
+  top: clamp(10%, 28vw, 90%);
+  z-index: 10;
+  width: auto;
+  height: auto;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-kor-link {
+  width: clamp(120px, 8vw, 205px);   
+  height: clamp(40px, 5vw, 70px);    
+}
+.medium-banner {
+  position: relative;
+  display: block; 
+  width: clamp(150px, 30vw, 400px);
+  height: clamp(80px, 20vw, 300px);
+  flex-shrink: 0; 
+}
+
+.medium-banner img[src$="shape_kat.png"] {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  z-index: 1;
+}
+.medium-banner-button {
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: auto;
+  height: auto;
+}
+
+.btn-kor-link {
+  position: relative;
+  display: block;
+  width: clamp(80px, 13vw, 200px);   
+  height: clamp(36px, 6vw, 60px);   
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.kor-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease;
+  display: block;
+  object-fit: contain;
+}
+
+.kor-hover,
+.kor-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-kor-link:hover .kor-hover {
+  opacity: 1;
+}
+
+.btn-kor-link:active .kor-active {
+  opacity: 1;
+  z-index: 2;
+}
+.btn-kor-link:active .kor-hover {
+  opacity: 0;
+}
+
+.banner-column {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(5px, 2vw, 20px);
+  align-items: flex-start;
+  flex-wrap: wrap;
+  flex: 1;
+  min-width: clamp(150px, 25vw, 300px);
+}
+
+.banner-row {
+  display: flex;
+  gap: clamp(5px, 2vw, 35px);
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
+.small-banner1 {
+  width: clamp(80px, 40vw, 600px);
+  height: clamp(30px, 9.5vw, 140px);
+  max-width: 100%;
+  position: relative;
+}
+.small-banner2 {
+  width: clamp(80px, 22vw, 400px);
+  height: clamp(30px, 9.5vw, 140px);
+  max-width: 100%;
+  position: relative;
+}
+.small-banner3 {
+  width: clamp(80px, 15vw, 300px);
+  height: clamp(30px, 9.5vw, 140px);
+  max-width: 100%;
+  position: relative;
+}
+
+.small-banner1 img,
+.small-banner2 img,
+.small-banner3 img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.block-slaider {
+    display: flex;
+    margin-left: 15%;
+    margin-top: clamp(5%, 15vw, 20%);
+}
+.block-slaider-text {
+    display: flex;
+    position: absolute;
+    left: clamp(1%, 39vw, 42%);
+    top: clamp(20%, 79vw, 160%);
+}
+.block-slaider-text2 {
+    display: flex;
+    position: absolute;
+    left: clamp(1%, 47vw, 50%);
+    top: clamp(100%, 230vw, 470%);
+}
+.block-slaider-text h2 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(5px, 3vw, 32px);
+    text-decoration: underline;
+}
+.block-slaider-text2 h2 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(5px, 3vw, 32px);
+    text-decoration: underline;
+}
+.block-slaider-item1 {
+    display: flex;
+    position: relative;
+    width: clamp(100px, 28vw, 800px);
+    height: clamp(50px, 28vw, 800px);
+    max-width: 100%;
+    margin-right: -4%;
+}
+.block-slaider-item2 {
+    display: flex;
+    position: relative;
+    width: clamp(100px, 28vw, 800px);
+    height: clamp(50px, 28vw, 800px);
+    max-width: 100%;
+    margin-right: -12%;
+}
+.block-slaider-item3 {
+    display: flex;
+    position: relative;
+    width: clamp(100px, 28vw, 800px);
+    height: clamp(50px, 28vw, 800px);
+    max-width: 100%;
+    margin: auto;
+}
+.block-button {
+    display: flex;
+    position: absolute;
+    top: clamp(10%, 100vw, 200%);
+    z-index: 10;
+}
+.block-button2 {
+    display: flex;
+    position: absolute;
+    top: clamp(100%, 253vw, 510%);
+    z-index: 10;
+}
+.block-slaider-button1 {
+    display: flex;
+    position: relative;
+    left: 150%;
+    z-index: 11;
+    width: clamp(10px, 3.5vw, 205px);
+    height: clamp(10px, 3.5vw, 205px);
+}
+.block-slaider-button2 {
+    display: flex;
+    position: relative;
+    z-index: 11;
+    right: -1200%;
+    width: clamp(10px, 3.5vw, 205px);
+    height: clamp(10px, 3.5vw, 205px);
+}
+.block-slaider-button3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 11;
+  left: 53%;
+  top: clamp(3%, 118vw, 238%);
+  transform: translateX(-50%);
+}
+
+.block-slaider-button4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 11;
+  left: 53%;
+  top: clamp(95%, 268vw, 550%);
+  transform: translateX(-50%);
+}
+
+/* ——— Кнопка ——— */
+.btn-kor {
+  position: relative;
+  display: inline-block;
+  width: clamp(80px, 12vw, 205px);  
+  height: clamp(40px, 7vw, 70px);   
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.kor-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity 0.2s ease;
+  display: block;
+  object-fit: contain;
+}
+
+.kor-hover,
+.kor-active {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.btn-kor:hover .kor-hover {
+  opacity: 1;
+}
+
+.btn-kor:active .kor-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.btn-kor:active .kor-hover {
+  opacity: 0;
+}
+
+.btn-kor:active {
+  transform: scale(0.97);
+  transition: transform 0.1s ease;
+}
+.block-info-text {
+    display: flex;
+    position: absolute;
+    left: clamp(1%, 44vw, 50%);
+    top: clamp(10%, 136vw, 270%);
+}
+.block-info-text h2 {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(5px, 3vw, 32px);
+    text-decoration: underline;
+}
+.block-info-items {
+    display: flex;
+    margin-left: 15%;
+    margin-top: 25%;
+    flex-wrap: wrap;
+}
+.img-item1 {
+    display: flex;
+    position: relative;
+    width: clamp(100px, 28vw, 800px);
+    height: clamp(50px, 28vw, 800px);
+}
+.img-item2 {
+    display: flex;
+    position: relative;
+    margin-top: 3%;
+    width: clamp(100px, 15vw, 600px);
+    height: clamp(50px, 15vw, 500px);
+}
+.img-item3 {
+    display: flex;
+    width: clamp(100px, 28vw, 800px);
+    height: clamp(50px, 28vw, 800px);
+}
+.rec-column {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    margin-left: -3%;
+    max-width: 100%;
+}
+.rec-column2 {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 17%;
+    max-width: 100%;
+}
+.rounded-rec {
+    width: clamp(200px, 45vw, 700px);
+    height: clamp(70px, 14vw, 250px);
+    border: 2px solid white;
+    border-radius: clamp(5px, 2vw, 25px);
+    margin-bottom: clamp(5px, 3vw, 35px);
+    position: relative;
+    padding: clamp(5px, 2vw, 20px); 
+    box-sizing: border-box;
+}
+.rounded-rec1 {
+    width: clamp(200px, 45vw, 700px);
+    height: clamp(45px, 10vw, 250px);
+    border: 2px solid white;
+    border-radius: clamp(5px, 1.5vw, 25px);
+    margin-bottom: clamp(5px, 2.5vw, 35px);
+    position: relative; 
+    padding: clamp(3px, 1vw, 20px);
+    box-sizing: border-box;
+    height: auto;
+    min-height: clamp(45px, 10vw, 150px);
+}
+.rounded-rec2 {
+    margin-top: 3%;
+    margin-right: 3%;
+    width: clamp(200px, 45vw, 700px);
+    height: clamp(45px, 15vw, 250px);
+    border: 2px solid white;
+    border-radius: clamp(5px, 1.5vw, 25px);
+    margin-bottom: clamp(5px, 2.5vw, 35px);
+    position: relative; 
+    padding: clamp(5px, 1.5vw, 20px);
+    box-sizing: border-box; 
+}
+.rounded-rec3 {
+    margin-top: 3%;
+    margin-right: 3%;
+    width: clamp(100px, 26vw, 500px);
+    height: clamp(45px, 12vw, 250px);
+    border: 2px solid white;
+    border-radius: clamp(5px, 1.5vw, 25px);
+    margin-bottom: clamp(5px, 2.5vw, 35px);
+    position: relative; 
+    padding: clamp(5px, 1.5vw, 20px);
+    box-sizing: border-box; 
+}
+.rounded-rec4 {
+    margin-top: 3%;
+    margin-right: 3%;
+    width: clamp(100px, 26vw, 500px);
+    height: clamp(45px, 12vw, 250px);
+    border: 2px solid white;
+    border-radius: clamp(5px, 1.5vw, 25px);
+    margin-bottom: clamp(5px, 2.5vw, 35px);
+    position: relative; 
+    padding: clamp(5px, 1.5vw, 20px);
+    box-sizing: border-box; 
+}
+
+.rounded-rec-text {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 10;
+    max-width: 100%;
+    min-width: 50%;
+    width: 100%;
+    word-wrap: break-word;
+}
+.rounded-rec-text h3 {
+    margin-top: clamp(-4%, 1vw, -0.1%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(5px, 2.5vw, 24px); 
+}
+.rounded-rec-text a {
+    margin-top: clamp(-4%, 1vw, -2%);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: clamp(3px, 1.8vw, 18px);
+}
+/*  футер  */
+.site-footer {
+    position: relative; 
+    z-index: 1;
+    padding-top: clamp(30px, 5vw, 60px);
+    padding-bottom: clamp(30px, 5vw, 80px);
+    background: transparent;
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: clamp(20px, 5vw, 50px);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(5%, 8vw, 10%);
+}
+
+
+.footer-contact,
+.footer-nav {
+    flex: 1;
+    min-width: clamp(200px, 25vw, 300px); 
+}
+
+.footer-contact h3 {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 600;
+    margin-bottom: clamp(10px, 2vw, 20px);
+    text-decoration: underline;
+}
+
+
+.footer-contact address {
+    font-style: normal;
+    line-height: 1.6;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+}
+.footer-nav a {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;                 
+    font-size: clamp(14px, 1.5vw, 18px); 
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    transition: color 0.2s ease;       
+}
+
+.footer-nav a:hover {
+    color: rgb(241, 241, 156);         
+    text-decoration: none;             
+}
+
+.footer-shape {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: clamp(350px, 22vw, 350px);
+    background: rgba(196, 166, 236);
+    z-index: -1;
+    
+}
+
+/* FAQ Section */
+.faq-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(30px, 8vw, 80px) 0;
+}
+
+.faq-title {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: clamp(20px, 4vw, 36px);
+    text-align: center;
+    margin-bottom: clamp(20px, 4vw, 50px);
+    text-decoration: underline;
+}
+
+.faq-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(20px, 5vw, 60px);
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.faq-questions {
+    flex: 1 1 300px;
+    min-width: clamp(250px, 35vw, 450px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2vw, 20px);
+}
+
+.faq-item {
+    position: relative;
+    border: 2px solid white;
+    border-radius: clamp(10px, 3vw, 50px);
+    padding: clamp(12px, 2.5vw, 20px) clamp(40px, 5vw, 60px) clamp(12px, 2.5vw, 20px) clamp(12px, 2.5vw, 20px);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 18px);
+    background: transparent;
+    box-sizing: border-box;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.faq-item::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: clamp(0px, 0.5vw, 0px);
+    transform: translateY(-50%);
+
+    
+    width: clamp(45px, 4.5vw, 73px);
+    height: clamp(45px, 4.5vw, 73px);
+    border: 2px solid white;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    background-image: url("../img/main/strelka.png");
+    background-size: clamp(8px, 2vw, 20px);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.faq-image {
+    flex: 0 0 auto;
+    width: clamp(200px, 30vw, 350px);
+    height: auto;
+    min-width: 200px;
+}
+
+.faq-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
