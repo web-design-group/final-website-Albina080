@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Miomint</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="styles/styles.css">
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -11,25 +11,35 @@
         <div class="flex-container">
             <div class="header-left-items">
                 <div class="icon-logo">
-                    <img src="img/main/icon_miu.png" alt="logo">
+                    <a href="index.html" class="logo-link">
+                    <img src="img/kat/logo_def.svg" alt="Логотип" class="logo-state logo-default">
+                    <img src="img/kat/logo_hov.svg" alt="" class="logo-state logo-hover">
+                    <img src="img/kat/logo_act.svg" alt="" class="logo-state logo-active">
+                    </a>
                 </div>
                 <div class="icon-shape">
+                    <img src="img/main/header_shape.png" alt="" class="shape-bg">
                     <nav>
-                        <img src="img/main/icon_lines.png" class="nav-icon" alt="lines">
-                        <a href="katalog.html">Каталог</a>
-                        <a href="#">Услуги</a>
-                        <a href="#">Личный кабинет</a>
+                    <img src="img/main/icon_lines.png" class="nav-icon" alt="Меню">
+                    <a href="katalog.html">Каталог</a>
+                    <a href="#">Услуги</a>
+                    <a href="#">Личный кабинет</a>
                     </nav>
-                    <img src="img/main/header_shape.png" alt="shape">
                 </div>
             </div>
+
             <div class="header-right-items">
                 <div class="icon-heart">
-                    <img src="img/main/icon_heart.png" alt="heart">
+                    <img src="img/kat/heart_def.svg" alt="Избранное" class="heart-state heart-default">
+                    <img src="img/kat/heart_hov.svg" alt="" class="heart-state heart-hover">
+                    <img src="img/kat/heart_act.svg" alt="" class="heart-state heart-active">
                 </div>
+
                 <div class="icon-bag">
                     <a href="bag.html" class="bag-link">
-                        <img src="img/main/icon_bag.png" alt="bag">
+                    <img src="img/kat/bag_def.svg" alt="Корзина" class="bag-state bag-default">
+                    <img src="img/kat/bag_hov.svg" alt="" class="bag-state bag-hover">
+                    <img src="img/kat/bag_act.svg" alt="" class="bag-state bag-active">
                     </a>
                 </div>
             </div>
@@ -49,7 +59,11 @@
                             </a>
                         </div>
                         <div class="big-banner-button">
-                            <img src="img/main/but_about.png" alt="baner">
+                            <a href="#" class="btn-kor-link">
+                                <img src="img/main/but_about_def.svg" alt="Подробнее" class="kor-state kor-default">
+                                <img src="img/main/but_about_hov.svg" alt="Подробнее" class="kor-state kor-hover">
+                                <img src="img/main/but_about_act.svg" alt="Подробнее" class="kor-state kor-active">
+                            </a>
                         </div>
                         <img src="img/main/shape_cat.png" alt="baner">
                     </div>
@@ -60,8 +74,10 @@
             <div class="main-banner">
                 <div class="medium-banner">
                     <div class="medium-banner-button">
-                        <a href="katalog.html" class="bag-link">
-                            <img src="img/main/but_kat.png" alt="button">
+                        <a href="katalog.html" class="btn-kor-link">
+                            <img src="img/main/but_katalog_def.svg" alt="В каталог" class="kor-state kor-default">
+                            <img src="img/main/but_katalog_hov.svg" alt="В каталог" class="kor-state kor-hover">
+                            <img src="img/main/but_katalog_act.svg" alt="В каталог" class="kor-state kor-active">
                         </a>
                     </div>
                     <img src="img/main/shape_kat.png" alt="baner">
@@ -107,7 +123,11 @@
                     </div>
                 </div>
                 <div class="block-slaider-button3">
-                    <img src="img/main/but_kor.png" alt="button">
+                    <button class="btn-kor" type="button">
+                        <img src="img/main/but_kor_def.svg" alt="В корзину" class="kor-state kor-default">
+                        <img src="img/main/but_kor_hov.svg" alt="В корзину" class="kor-state kor-hover">
+                        <img src="img/main/but_kor_act.svg" alt="В корзину" class="kor-state kor-active">
+                    </button>
                 </div>
             </div>
         </section>
@@ -190,7 +210,11 @@
                     </div>
                 </div>
                 <div class="block-slaider-button4">
-                    <img src="img/main/but_pod.png" alt="button">
+                    <button class="btn-kor" type="button">
+                        <img src="img/main/but_pod_def.svg" alt="Корзина" class="kor-state kor-default">
+                        <img src="img/main/but_pod_hov.svg" alt="Корзина" class="kor-state kor-hover">
+                        <img src="img/main/but_pod_act.svg" alt="Корзина" class="kor-state kor-active">
+                    </button>
                 </div>
             </div>
         </section>
@@ -238,9 +262,11 @@
                 <a href="#">Отзывы</a>
             </div>
         </div>
-
         <div class="footer-shape"></div>
     </footer>
 </body>
     
+</html>
+    
+
 </html>
